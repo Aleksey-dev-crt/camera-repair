@@ -1,0 +1,48 @@
+.card-small {
+  max-width: 225px;
+  background: #1c1c1e;
+  border-radius: 10px;
+  padding: 20px;
+  transition: background 0.3s linear;
+
+  &__category {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #EAEAF0;
+
+  }
+
+  &__description {
+    margin: 38px 0 0 0;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    color: #8e8e98;
+  }
+}
+
+.card-small:hover {
+  background: #232327;
+  cursor: pointer;
+}
+
+@media (max-width: 1350px) {
+  .card-small {
+    max-width: 274px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-small {
+    max-width: 240px;
+
+    &__description {
+      margin: 36px 0 0 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+

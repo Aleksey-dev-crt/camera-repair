@@ -1,0 +1,46 @@
+.cards-small {
+  padding: 60px 160px;
+
+  &__image {
+    background: url(../images/guarantee_desktop.svg) no-repeat;
+  }
+
+  &__list {
+    all: unset;
+    list-style: none;
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1350px) {
+  .cards-small {
+    padding: 60px;
+
+    &__image {
+      background: url(../images/guarantee_tablet.svg) no-repeat;
+      width: 400px;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cards-small {
+    padding: 40px 20px 30px;
+
+    &__image {
+      background: url(../images/guarantee_mobile.svg) no-repeat;
+      width: 200px;
+    }
+
+    &__list {
+      margin-top: 40px;
+    }
+  }
+}

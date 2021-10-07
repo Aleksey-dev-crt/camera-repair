@@ -1,0 +1,94 @@
+.photos {
+  padding: 60px 30px;
+  display: grid;
+  grid-template-columns: 448px 1fr 730px;
+  grid-template-rows: 230px 552px;
+  gap: 20px;
+  grid-template-areas:
+    "photo-1 yellow-block yellow-block"
+    "green-block green-block photo-2";
+
+  &__block:nth-child(1) {
+    grid-area: photo-1;
+    background-image: url(../images/photo-1.jpg);
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  &__block:nth-child(2) {
+    grid-area: yellow-block;
+    background-color: $yellow;
+    border-radius: 10px;
+  }
+
+  &__block:nth-child(3) {
+    grid-area: green-block;
+    background-color: $green;
+    border-radius: 10px;
+  }
+
+  &__block:nth-child(4) {
+    grid-area: photo-2;
+    background-image: url(../images/photo-2.jpg);
+    background-size: cover;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .photos {
+    padding: 32px 60px 60px;
+    grid-template-columns: 448px 1fr 455px;
+    grid-template-rows: 230px 344px;
+    grid-template-areas:
+    "photo-1 photo-1 yellow-block"
+    "green-block photo-2 photo-2";
+  }
+}
+
+@media (max-width: 1060px) {
+  .photos {
+    grid-template-columns: minmax(173px, 1fr) 1fr minmax(180px, 1fr);
+
+    &__block:nth-child(1) {
+      min-width: 448px;
+    }
+
+    &__block:nth-child(4) {
+      min-width: 455px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .photos {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 142px 67px 124px 211px;
+    grid-template-areas:
+    "photo-1"
+    "yellow-block"
+    "green-block"
+    "photo-2";
+
+    &__block:nth-child(1) {
+      min-width: 280px;
+      border-radius: 4px;
+    }
+
+    &__block:nth-child(2) {
+      min-width: 280px;
+      border-radius: 4px;
+    }
+
+    &__block:nth-child(3) {
+      min-width: 280px;
+      border-radius: 4px;
+    }
+
+    &__block:nth-child(4) {
+      min-width: 280px;
+      border-radius: 4px;
+    }
+  }
+}

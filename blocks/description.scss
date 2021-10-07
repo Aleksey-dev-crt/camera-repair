@@ -1,0 +1,48 @@
+.description {
+  padding: 60px 160px;
+
+  &__text {
+    margin: 0 0 60px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+    color: #8e8e98;
+  }
+
+  &__image {
+    background: url(../images/for-enthusiasts_desktop.svg) no-repeat;
+  }
+}
+
+@media (max-width: 1350px) {
+  .description {
+    padding: 60px;
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__image {
+      background: url(../images/for-enthusiasts_tablet.svg) no-repeat;
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .description {
+    padding: 40px 20px 30px;
+
+    &__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__image {
+      background: url(../images/for-enthusiasts_mobile.svg) no-repeat;
+      width: 200px;
+    }
+  }
+}
