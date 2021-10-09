@@ -1,5 +1,8 @@
 .card-small {
-  max-width: 225px;
+  all: unset;
+  display: block;
+  min-width: 225px;
+  min-height: 113px;
   background: #1c1c1e;
   border-radius: 10px;
   padding: 20px;
@@ -7,18 +10,13 @@
 
   &__category {
     margin: 0;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
+    font: $text-card-category;
     color: #EAEAF0;
-
   }
 
   &__description {
     margin: 38px 0 0 0;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 19px;
+    font: $text-card-small;
     color: #8e8e98;
   }
 }
@@ -37,11 +35,17 @@
 @media (max-width: 500px) {
   .card-small {
     max-width: 240px;
+    min-height: 108px;
+
+    &__category {
+      margin: 0;
+      font: $text-card-category_mobile;
+      color: #EAEAF0;
+    }
 
     &__description {
       margin: 36px 0 0 0;
-      font-size: 12px;
-      line-height: 18px;
+      font: $text-main_mobile;
     }
   }
 }

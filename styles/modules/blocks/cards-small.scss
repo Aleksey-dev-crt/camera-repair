@@ -9,9 +9,8 @@
     all: unset;
     list-style: none;
     margin-top: 60px;
-    display: flex;
+    @include flex($justify: center);
     gap: 20px;
-    justify-content: center;
   }
 }
 

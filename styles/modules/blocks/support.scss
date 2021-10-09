@@ -1,5 +1,5 @@
 .support {
-  padding: 60px 160px 180px;
+  padding: 60px 160px 240px;
 
   &__image {
     background: url(../images/support_desktop.svg) no-repeat;
@@ -13,9 +13,7 @@
     border-radius: 8px;
     outline: none;
     border: none;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font: $text-button;
     text-align: center;
     letter-spacing: 0.375px;
     color: $primaryTextColor;
@@ -29,9 +27,7 @@
 
   &__description {
     margin: 0;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 40px;
+    font: $text-main_desktop;
     color: #8e8e98;
   }
 }
@@ -39,7 +35,7 @@
 
 @media (max-width: 1350px) {
   .support {
-    padding: 60px 60px 150px;
+    padding: 60px 60px 210px;
 
     &__image {
       background: url(../images/support_tablet.svg) no-repeat;
@@ -51,15 +47,14 @@
     }
 
     &__description {
-      font-size: 20px;
-      line-height: 30px;
+      font: $text-main_tablet;
     }
   }
 }
 
 @media (max-width: 500px) {
   .support {
-    padding: 40px 20px 30px;
+    padding: 40px 20px 180px;
 
     &__image {
       background: url(../images/support_mobile.svg) no-repeat;
@@ -68,13 +63,11 @@
 
     &__button {
       margin: 50px 0 30px 0;
-      font-size: 12px;
-      line-height: 18px;
+      font: $text-main_mobile;
     }
 
     &__description {
-      font-size: 12px;
-      line-height: 18px;
+      font: $text-main_mobile;
     }
   }
 }

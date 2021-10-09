@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -348,10 +349,9 @@ template {
   src: url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff");
   font-weight: 500;
 }
-.title {
-  color: #fff;
-}
-
+/* ЦВЕТА */
+/* ЗАГОЛОВКИ */
+/* ТЕКСТ */
 .page {
   max-width: 1440px;
   min-width: 320px;
@@ -385,9 +385,7 @@ template {
 }
 .company__title {
   margin: 0;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 30px;
+  font: 400 22px/30px Roboto;
 }
 .company__subtitle {
   margin: 0;
@@ -395,9 +393,7 @@ template {
   background-color: #25e197;
   color: #000;
   border-radius: 4px;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 12px;
+  font: 400 12px/12px Roboto;
 }
 
 @media (max-width: 500px) {
@@ -405,65 +401,60 @@ template {
     gap: 16px;
   }
   .company__title {
-    font-size: 20px;
-    line-height: 28px;
+    font: 400 20px/28px Roboto;
   }
 }
 .intro {
   padding: 60px 160px;
 }
-.intro__title {
+.intro__title-text {
   margin: 0 0 20px 0;
-  font-weight: normal;
-  font-size: 112px;
-  line-height: 112px;
+  font: 400 112px/112px Roboto;
 }
-.intro__subtitle {
+.intro__title {
   margin: 0 0 230px 0;
-  font-weight: normal;
-  font-size: 80px;
-  line-height: 70px;
+  font: 400 80px/70px Roboto;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 @media (max-width: 1350px) {
   .intro {
     padding: 70px 0 20px 60px;
   }
-  .intro__title {
+  .intro__title-text {
+    font: 400 70px/90px Roboto;
     margin: 0;
-    font-size: 70px;
-    line-height: 90px;
   }
-  .intro__subtitle {
+  .intro__title {
     margin: 0 0 470px 0;
-    font-size: 50px;
-    line-height: 60px;
+    font: 400 50px/60px Roboto;
   }
 }
 @media (max-width: 500px) {
   .intro {
     padding: 60px 0 20px 20px;
   }
-  .intro__title {
-    font-size: 50px;
-    line-height: 60px;
+  .intro__title-text {
+    font: 400 50px/60px Roboto;
   }
-  .intro__subtitle {
+  .intro__title {
     margin: 0 0 260px 0;
-    font-size: 30px;
-    line-height: 38px;
+    font: 400 30px/38px Roboto;
   }
 }
 .form__container {
   display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 .form__label {
   display: block;
   margin: 12px 0 0 10px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
+  font: 400 12px/18px Roboto;
   color: #47474c;
 }
 .form__input {
@@ -479,8 +470,9 @@ template {
 }
 .form__submit {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
   gap: 10px;
   width: 221px;
   height: 50px;
@@ -492,6 +484,10 @@ template {
   border: none;
   color: #fff;
   transition: background 0.3s linear;
+}
+.form__submit-text {
+  font: 400 14px/24px Roboto;
+  letter-spacing: 0.375px;
 }
 .form__input:hover {
   background: rgba(142, 142, 152, 0.3);
@@ -523,6 +519,7 @@ template {
   display: grid;
   grid-template-columns: 448px 1fr 730px;
   grid-template-rows: 230px 552px;
+  display: grid;
   gap: 20px;
   grid-template-areas: "photo-1 yellow-block yellow-block" "green-block green-block photo-2";
 }
@@ -552,6 +549,7 @@ template {
 @media (max-width: 1270px) {
   .photos {
     padding: 32px 60px 60px;
+    display: grid;
     grid-template-columns: 448px 1fr 455px;
     grid-template-rows: 230px 344px;
     grid-template-areas: "photo-1 photo-1 yellow-block" "green-block photo-2 photo-2";
@@ -559,7 +557,9 @@ template {
 }
 @media (max-width: 1060px) {
   .photos {
+    display: grid;
     grid-template-columns: minmax(173px, 1fr) 1fr minmax(180px, 1fr);
+    grid-template-rows: 230px 344px;
   }
   .photos__block:nth-child(1) {
     min-width: 448px;
@@ -571,6 +571,7 @@ template {
 @media (max-width: 760px) {
   .photos {
     padding: 20px;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 142px 67px 124px 211px;
     grid-template-areas: "photo-1" "yellow-block" "green-block" "photo-2";
@@ -597,10 +598,7 @@ template {
 }
 .description__text {
   margin: 0 0 60px 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 40px;
+  font: 400 32px/40px Roboto;
   color: #8e8e98;
 }
 .description__image {
@@ -612,8 +610,7 @@ template {
     padding: 60px;
   }
   .description__text {
-    font-size: 20px;
-    line-height: 30px;
+    font: 400 20px/30px Roboto;
   }
   .description__image {
     background: url(../images/for-enthusiasts_tablet.svg) no-repeat;
@@ -625,8 +622,8 @@ template {
     padding: 40px 20px 30px;
   }
   .description__text {
-    font-size: 12px;
-    line-height: 18px;
+    margin: 0 0 20px 0;
+    font: 400 12px/18px Roboto;
   }
   .description__image {
     background: url(../images/for-enthusiasts_mobile.svg) no-repeat;
@@ -640,8 +637,10 @@ template {
   all: unset;
   list-style: none;
   display: flex;
-  gap: 20px;
+  align-items: stretch;
   justify-content: center;
+  flex-direction: row;
+  gap: 20px;
 }
 
 @media (max-width: 1350px) {
@@ -658,7 +657,9 @@ template {
   }
 }
 .card-large {
-  max-width: 470px;
+  all: unset;
+  display: block;
+  min-width: 470px;
   background: #1c1c1e;
   border-radius: 16px;
   padding: 40px;
@@ -666,29 +667,21 @@ template {
 }
 .card-large__category {
   margin: 0;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 18px;
+  font: 400 18px/18px Roboto;
   color: #8e8e98;
 }
 .card-large__heading {
   margin: 20px 0 40px 0;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 32px;
+  font: 400 32px/32px Roboto;
 }
 .card-large__description {
   margin: 0 0 40px 0;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 40px;
+  font: 400 32px/40px Roboto;
   color: #8e8e98;
 }
 .card-large__price {
   margin: 0;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
+  font: 400 14px/14px Roboto;
   color: #25e197;
 }
 
@@ -702,24 +695,21 @@ template {
     max-width: 568px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   .card-large {
     padding: 20px;
-    max-width: 240px;
+    min-width: 240px;
   }
   .card-large__heading {
     margin: 10px 0 28px 0;
-    font-size: 24px;
-    line-height: 32px;
+    font: 400 24px/32px Roboto;
   }
   .card-large__description {
     margin: 0 0 100px 0;
-    font-size: 12px;
-    line-height: 18px;
+    font: 400 12px/18px Roboto;
   }
   .card-large__price {
-    font-size: 12px;
-    line-height: 18px;
+    font: 400 12px/18px Roboto;
   }
 }
 .cards-small {
@@ -733,8 +723,10 @@ template {
   list-style: none;
   margin-top: 60px;
   display: flex;
-  gap: 20px;
+  align-items: stretch;
   justify-content: center;
+  flex-direction: row;
+  gap: 20px;
 }
 
 @media (max-width: 1350px) {
@@ -762,7 +754,10 @@ template {
   }
 }
 .card-small {
-  max-width: 225px;
+  all: unset;
+  display: block;
+  min-width: 225px;
+  min-height: 113px;
   background: #1c1c1e;
   border-radius: 10px;
   padding: 20px;
@@ -770,16 +765,12 @@ template {
 }
 .card-small__category {
   margin: 0;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
+  font: 400 18px/18px Roboto;
   color: #EAEAF0;
 }
 .card-small__description {
   margin: 38px 0 0 0;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 19px;
+  font: 400 15px/19px Roboto;
   color: #8e8e98;
 }
 
@@ -796,15 +787,20 @@ template {
 @media (max-width: 500px) {
   .card-small {
     max-width: 240px;
+    min-height: 108px;
+  }
+  .card-small__category {
+    margin: 0;
+    font: 500 18px/18px Roboto;
+    color: #EAEAF0;
   }
   .card-small__description {
     margin: 36px 0 0 0;
-    font-size: 12px;
-    line-height: 18px;
+    font: 400 12px/18px Roboto;
   }
 }
 .support {
-  padding: 60px 160px 180px;
+  padding: 60px 160px 240px;
 }
 .support__image {
   background: url(../images/support_desktop.svg) no-repeat;
@@ -817,9 +813,7 @@ template {
   border-radius: 8px;
   outline: none;
   border: none;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font: 400 14px/24px Roboto;
   text-align: center;
   letter-spacing: 0.375px;
   color: #fff;
@@ -831,15 +825,13 @@ template {
 }
 .support__description {
   margin: 0;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 40px;
+  font: 400 32px/40px Roboto;
   color: #8e8e98;
 }
 
 @media (max-width: 1350px) {
   .support {
-    padding: 60px 60px 150px;
+    padding: 60px 60px 210px;
   }
   .support__image {
     background: url(../images/support_tablet.svg) no-repeat;
@@ -849,13 +841,12 @@ template {
     margin: 80px 0 40px 0;
   }
   .support__description {
-    font-size: 20px;
-    line-height: 30px;
+    font: 400 20px/30px Roboto;
   }
 }
 @media (max-width: 500px) {
   .support {
-    padding: 40px 20px 30px;
+    padding: 40px 20px 180px;
   }
   .support__image {
     background: url(../images/support_mobile.svg) no-repeat;
@@ -863,12 +854,10 @@ template {
   }
   .support__button {
     margin: 50px 0 30px 0;
-    font-size: 12px;
-    line-height: 18px;
+    font: 400 12px/18px Roboto;
   }
   .support__description {
-    font-size: 12px;
-    line-height: 18px;
+    font: 400 12px/18px Roboto;
   }
 }
 .footer {
@@ -877,18 +866,20 @@ template {
   padding: 60px 0;
   border-top: 2px solid #151515;
   display: flex;
+  align-items: stretch;
   justify-content: space-between;
+  flex-direction: row;
 }
 .footer__container {
   display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
   flex-direction: column;
   gap: 84px;
 }
 .footer__copyright {
   margin: 0;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
+  font: 400 12px/18px Roboto;
   color: #47474c;
   align-self: flex-end;
 }
@@ -909,5 +900,8 @@ template {
     padding: 30px 0 20px 0;
     margin: 0 20px;
     gap: 40px;
+  }
+  .footer__container {
+    gap: 184px;
   }
 }/*# sourceMappingURL=index.css.map */

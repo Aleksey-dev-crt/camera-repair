@@ -3,10 +3,7 @@
 
   &__text {
     margin: 0 0 60px 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 40px;
+    font: $text-main_desktop;
     color: #8e8e98;
   }
 
@@ -20,8 +17,7 @@
     padding: 60px;
 
     &__text {
-      font-size: 20px;
-      line-height: 30px;
+      font: $text-main_tablet;
     }
 
     &__image {
@@ -36,8 +32,8 @@
     padding: 40px 20px 30px;
 
     &__text {
-      font-size: 12px;
-      line-height: 18px;
+      margin: 0 0 20px 0;
+      font: $text-main_mobile;
     }
 
     &__image {

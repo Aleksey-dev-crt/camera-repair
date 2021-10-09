@@ -4,6 +4,7 @@ const buttonTextIntro = document.querySelector("#button-text-intro");
 const buttonImgIntro = document.querySelector("#img-intro");
 const buttonTextFooter = document.querySelector("#button-text-footer");
 const buttonImgFooter = document.querySelector("#img-footer");
+const form = document.querySelectorAll(".form");
 
 function changeButton(input, buttonText, buttonImg) {
   if (
@@ -22,4 +23,10 @@ formInputIntro.addEventListener("keyup", () => {
 
 formInputFooter.addEventListener("keyup", () => {
   changeButton(formInputFooter, buttonTextFooter, buttonImgFooter);
+});
+
+form.forEach((element) => {
+  element.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
 });

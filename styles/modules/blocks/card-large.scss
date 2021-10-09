@@ -1,5 +1,7 @@
 .card-large {
-  max-width: 470px;
+  all: unset;
+  display: block;
+  min-width: 470px;
   background: #1c1c1e;
   border-radius: 16px;
   padding: 40px;
@@ -7,32 +9,24 @@
 
   &__category {
     margin: 0;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 18px;
+    font: $text-card-category;
     color: #8e8e98;
   }
 
   &__heading {
     margin: 20px 0 40px 0;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 32px;
+    font: $text-card-heading;
   }
 
   &__description {
     margin: 0 0 40px 0;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 40px;
+    font: $text-main_desktop;
     color: #8e8e98;
   }
 
   &__price {
     margin: 0;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 14px;
+    font: $text-card-price;
     color: #25e197;
   }
 }
@@ -48,26 +42,23 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   .card-large {
     padding: 20px;
-    max-width: 240px;
+    min-width: 240px;
 
     &__heading {
       margin: 10px 0 28px 0;
-      font-size: 24px;
-      line-height: 32px;
+      font: $text-card-heading_mobile;
     }
 
     &__description {
       margin: 0 0 100px 0;
-      font-size: 12px;
-      line-height: 18px;
+      font: $text-main_mobile;
     }
 
     &__price {
-      font-size: 12px;
-      line-height: 18px;
+      font: $text-main_mobile;
     }
   }
 }
