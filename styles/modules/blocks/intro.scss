@@ -1,0 +1,45 @@
+.intro {
+  padding: 60px 160px;
+
+  &__title-text {
+    margin: 0 0 20px 0;
+    font: $heading-1_desktop;
+  }
+
+  &__title {
+    margin: 0 0 230px 0;
+    font: $heading-2_desktop;
+    @include flex($direction: column);
+  }
+}
+
+@media (max-width: 1350px) {
+  .intro {
+    padding: 70px 0 20px 60px;
+
+    &__title-text {
+      font: $heading-1_tablet;
+      margin: 0;
+    }
+
+    &__title {
+      margin: 0 0 470px 0;
+      font: $heading-2_tablet;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .intro {
+    padding: 60px 0 20px 20px;
+
+    &__title-text {
+      font: $heading-1_mobile;
+    }
+
+    &__title {
+      margin: 0 0 260px 0;
+      font: $heading-2_mobile;
+    }
+  }
+}

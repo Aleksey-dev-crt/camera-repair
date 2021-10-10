@@ -1,0 +1,26 @@
+.cards-large {
+  padding: 60px 160px;
+
+    &__list {
+      all: unset;
+      list-style: none;
+      @include flex($justify: center);
+      gap: 20px;
+    }
+}
+
+@media (max-width: 1350px) {
+  .cards-large {
+    padding: 60px;
+
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cards-large {
+    padding: 40px 20px 30px;
+  }
+}

@@ -1,0 +1,64 @@
+.card-large {
+  all: unset;
+  display: block;
+  min-width: 470px;
+  background: #1c1c1e;
+  border-radius: 16px;
+  padding: 40px;
+  transition: background 0.3s linear;
+
+  &__category {
+    margin: 0;
+    font: $text-card-category;
+    color: #8e8e98;
+  }
+
+  &__heading {
+    margin: 20px 0 40px 0;
+    font: $text-card-heading;
+  }
+
+  &__description {
+    margin: 0 0 40px 0;
+    font: $text-main_desktop;
+    color: #8e8e98;
+  }
+
+  &__price {
+    margin: 0;
+    font: $text-card-price;
+    color: #25e197;
+  }
+}
+
+.card-large:hover {
+  background: #232327;
+  cursor: pointer;
+}
+
+@media (max-width: 1350px) {
+  .card-large {
+    max-width: 568px;
+  }
+}
+
+@media (max-width: 630px) {
+  .card-large {
+    padding: 20px;
+    min-width: 240px;
+
+    &__heading {
+      margin: 10px 0 28px 0;
+      font: $text-card-heading_mobile;
+    }
+
+    &__description {
+      margin: 0 0 100px 0;
+      font: $text-main_mobile;
+    }
+
+    &__price {
+      font: $text-main_mobile;
+    }
+  }
+}

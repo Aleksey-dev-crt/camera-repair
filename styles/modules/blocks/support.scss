@@ -1,0 +1,73 @@
+.support {
+  padding: 60px 160px 240px;
+
+  &__image {
+    background: url(../images/support_desktop.svg) no-repeat;
+  }
+
+  &__button {
+    display: block;
+    margin: 90px 0 50px 0;
+    padding: 13px 30px;
+    background: #47474c;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font: $text-button;
+    text-align: center;
+    letter-spacing: 0.375px;
+    color: $primaryTextColor;
+    transition: background 0.3s linear;
+  }
+
+  &__button:hover {
+    background: #232327;
+    cursor: pointer;
+  }
+
+  &__description {
+    margin: 0;
+    font: $text-main_desktop;
+    color: #8e8e98;
+  }
+}
+
+
+@media (max-width: 1350px) {
+  .support {
+    padding: 60px 60px 210px;
+
+    &__image {
+      background: url(../images/support_tablet.svg) no-repeat;
+      width: 400px;
+    }
+
+    &__button {
+      margin: 80px 0 40px 0;
+    }
+
+    &__description {
+      font: $text-main_tablet;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .support {
+    padding: 40px 20px 180px;
+
+    &__image {
+      background: url(../images/support_mobile.svg) no-repeat;
+      width: 200px;
+    }
+
+    &__button {
+      margin: 50px 0 30px 0;
+      font: $text-main_mobile;
+    }
+
+    &__description {
+      font: $text-main_mobile;
+    }
+  }
+}

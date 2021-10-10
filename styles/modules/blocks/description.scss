@@ -1,0 +1,44 @@
+.description {
+  padding: 60px 160px;
+
+  &__text {
+    margin: 0 0 60px 0;
+    font: $text-main_desktop;
+    color: #8e8e98;
+  }
+
+  &__image {
+    background: url(../images/for-enthusiasts_desktop.svg) no-repeat;
+  }
+}
+
+@media (max-width: 1350px) {
+  .description {
+    padding: 60px;
+
+    &__text {
+      font: $text-main_tablet;
+    }
+
+    &__image {
+      background: url(../images/for-enthusiasts_tablet.svg) no-repeat;
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .description {
+    padding: 40px 20px 30px;
+
+    &__text {
+      margin: 0 0 20px 0;
+      font: $text-main_mobile;
+    }
+
+    &__image {
+      background: url(../images/for-enthusiasts_mobile.svg) no-repeat;
+      width: 200px;
+    }
+  }
+}
