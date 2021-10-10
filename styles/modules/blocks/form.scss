@@ -57,6 +57,10 @@
   .form {
     &__input {
       min-width: 395px;
+
+      &_size_small {
+        min-width: 316px;
+      }
     }
   }
 }

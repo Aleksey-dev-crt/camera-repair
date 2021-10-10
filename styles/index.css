@@ -502,6 +502,9 @@ template {
   .form__input {
     min-width: 395px;
   }
+  .form__input_size_small {
+    min-width: 316px;
+  }
 }
 @media (max-width: 720px) {
   .form__input {
