@@ -17,11 +17,11 @@ function changeButton(input, buttonText, buttonImg) {
   }
 }
 
-formInputIntro.addEventListener("keyup", () => {
+formInputIntro.addEventListener("input", () => {
   changeButton(formInputIntro, buttonTextIntro, buttonImgIntro);
 });
 
-formInputFooter.addEventListener("keyup", () => {
+formInputFooter.addEventListener("input", () => {
   changeButton(formInputFooter, buttonTextFooter, buttonImgFooter);
 });
 
