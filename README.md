@@ -11,5 +11,3 @@ _Данный проект представляет собой веб стран
 **Ссылка на страницу**
 
 - [Camera repair](https://aleksey-dev-crt.github.io/camera-repair/index.html)
-
-*статус проекта: завершен*
